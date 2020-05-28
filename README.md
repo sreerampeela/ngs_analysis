@@ -14,6 +14,6 @@ For the tool to work without any changes and to aid in resolving paths for each 
 6. Enter accession ids or file names (without .fastq or .fastq.gz extensions) separated by spaces and within double quotes. Change variables "f" and "r" depending on the extension of file. Alternately you can compress .fastq files using gzip to conserve space
 7. All parameters choosen are based on "Genome Assembly Tutorial: Command Line" by Anthony Underwood and through discussion with experts and peers. Cross validation with different parameters should be done.
 
-I gratefully acknowledge Anthony Underwood and my friends Ms. Jyoti Sharma and Ms. Steffi Roseand peers from LLB group for providing the tutorial and the inputs.
+I gratefully acknowledge Anthony Underwood and my friends Ms. Jyoti Sharma and Ms. Steffi Rose and peers from LLB group for providing the tutorial and the inputs.
 
 Hope you find it interesting.
