@@ -1,21 +1,27 @@
 #!bin/bash
 
-#create directories for each tool in the current working directory. Preferably all the genome files and database files should be in the same folder
+#All the genome files and database files should be in the same folder
 
-#append the exact path to each program. it depends on the location where you installed them. 
+#Append the exact path to each program. it depends on the location where you installed them. If not sure, follow instructions in README during installation. For the script, I installed in $HOME/softwares directory.
 
 #enter accession ids or file names (without .fastq or .fastq.gz extensions) separated by spaces and within double quotes. Change variables "f" and "r" depending on the extension of file.
 
 #all parameters choosen are based on Sanger Institute tutorial on WGS. Cross validation with different parameters should be done.
 
-#the PATHs for each tool depends on the installation directory of the tool. Change paths whereever necessary. For the script, I installed in $HOME/softwares directory.
-
 acc_list=<file names/acc ids>
+mkdir trimmomatic
+mkdir mash
+mkdir seqtk
+mkdir lighter
+mkdir flash
+mkdir spades
+mkdir quast
+mkdir prokka
 
 #start loop for accessing the files or accession ids
 
 for acc in $acc_list; do
-	f="_1.fastq.gz"
+	f="_1.fastq.gz" #for appending extension
 	r="_2.fastq.gz"
 	acc_f=$acc$f
 	acc_r=$acc$r
@@ -85,8 +91,9 @@ for acc in $acc_list; do
 	echo "Successfully completed checking quality of assembly. Output files are in $PWD/quast"
 
 	#annotation of genome with prokka
+	genes=<filename>.gbff #download gbff files from NCBI and copy to current directory
 	echo "Annotating $acc genome with prokka.."
-	prokka --proteins /media/dell/work/ngs/prokka_gbk_file.gbff --outdir prokka/proka/ --force $fasta --genus Streptococcus --species pneumoniae --mincontiglen 200 --prefix $acc
+	prokka --proteins $genes --outdir prokka/proka/ --force $fasta --genus <genus name> --species <species name> --mincontiglen 200 --prefix $acc
 	echo "Successfully completed Prokka. Output files are in $PWD/prokka"
 
 done
