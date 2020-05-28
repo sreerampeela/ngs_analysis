@@ -7,13 +7,21 @@ The description to each program is provided as comments.
 
 DEPENDENCIES: 
 The script runs on the following tools for NGS QC, assembly and annotation.
+
 Trimmomatic-0.39 (http://www.usadellab.org/cms/?page=trimmomatic)
+
 MASH-2.0 (https://github.com/marbl/Mash)
+
 SEQTK-1.2-r94 (https://github.com/lh3/seqtk)
+
 LIGHTER (https://github.com/mourisl/Lighter)
+
 FLASH-1.2.11 (https://ccb.jhu.edu/software/FLASH/)
+
 SPADES-3.14.1 (http://cab.spbu.ru/software/spades/)
+
 QUAST-5.1.0 (http://bioinf.spbau.ru/quast)
+
 PROKKA1.14.6 (https://github.com/tseemann/prokka)
 
 For the tool to work without any changes and to aid in resolving paths for each program/tool, please follow the instructions below (you may skip this if you are good in linux programming):
