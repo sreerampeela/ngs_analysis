@@ -39,7 +39,7 @@ for acc in $acc_list; do
 	acc_r1=$acc$r1
 	acc_r2=$acc$r2
 
-	sudo java -jar ../../softwares/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 $acc_f $acc_r trimmomatic/$acc_f1 trimmomatic/$acc_f2 trimmomatic/$acc_r1 trimmomatic/$acc_r2 ILLUMINACLIP:../../softwares/Trimmomatic-0.39/adapters/TruSeq2-PE.fa:2:30:10 LEADING:15 TRAILING:10 SLIDINGWINDOW:4:15 MINLEN:36
+	sudo java -jar ../../softwares/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 $acc_f $acc_r trimmomatic/$acc_f1 trimmomatic/$acc_f2 trimmomatic/$acc_r1 trimmomatic/$acc_r2 ILLUMINACLIP:../../softwares/Trimmomatic-0.39/adapters/<adapters used>:2:30:10 LEADING:15 TRAILING:10 SLIDINGWINDOW:4:15 MINLEN:36
 
 	#run mash for mash stats
 	sk1="sketch"$acc_f1
